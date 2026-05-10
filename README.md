@@ -25,6 +25,7 @@ It is also better way to provide them a reset password mail which redirect them 
 -**userRouter.post("/request-reset-password", requestResetPassword);**
    
 -**userRouter.post("/reset-pass", resetPassword)**
+
 2. Send a url of changing the password while requesting the reset password.
 3. Take query parameters and password from body. 
 4. If everything is right then change the password.
