@@ -1,5 +1,5 @@
 import express from "express";
-import { signUpUser, verifyOTP } from "../controllers/user.controller.js";
+import { signUpUser, verifyOTP, requestResetPassword, resetPassword } from "../controllers/user.controller.js";
 
 const userRouter = express.Router();
 
@@ -7,7 +7,8 @@ const userRouter = express.Router();
 userRouter.post("/sign-up", signUpUser)
 userRouter.post("/verify-OTP", verifyOTP)
 // userRouter.post("/sign-in", )
-// userRouter.post("/reset-password", )
+userRouter.post("/request-reset-password", requestResetPassword);
+userRouter.post("/reset-pass", resetPassword)
 
 
 export default userRouter;
